@@ -74,6 +74,9 @@ export class LoginComponent implements OnInit {
           /*       this.tokenService.saveUser(data.userName);
                  this.roles = this.tokenService.getUser().roles;*/
         },
+        (error: HttpErrorResponse) => {
+          alert('Tên tài khoản hoặc mật khẩu không chính xác. Xin mời nhập lại!');
+        },
       );
       // eslint-disable-next-line max-len
 
