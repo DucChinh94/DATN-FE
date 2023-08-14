@@ -92,7 +92,7 @@ export class UserEditComponent implements OnInit {
           this.profiles = data;
         } else {
           this.profiles = {
-            academicLevel: {id:1,code:'Cao Đẳng',description:'abc',delete:false},
+            academicLevel: {id:1,code:'Cao học',description:'Cao học',isDelete:false},
             delete: 0,
             description: '',
             desiredSalary: '',
@@ -157,6 +157,7 @@ export class UserEditComponent implements OnInit {
     this.profiles.academicLevel=this.formUser.value.academicLevel;
     this.profiles.desiredSalary=this.formUser.value.desiredSalary;
     this.profiles.desiredWorkingForm=this.formUser.value.desiredWorkingForm;
+    this.profiles.numberYearsExperience=this.formUser.value.numberYearsExperience;
   }
 
   public updateProfile(){
@@ -194,7 +195,7 @@ export class UserEditComponent implements OnInit {
   uploadAvatar() {
     this.uploadService.uploadAvatar(this.fileAvatar, this.user.id).subscribe(
       (data: any) => {
-        alert(data.message);
+        // alert(data.message);
       },
       (error: HttpErrorResponse) => {
         alert(error.message);

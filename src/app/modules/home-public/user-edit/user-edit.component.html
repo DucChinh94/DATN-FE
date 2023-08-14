@@ -109,8 +109,7 @@
               <select
                 class="custom-select mb-3"
                 formControlName="academicLevel"
-                [(ngModel)]="profiles.academicLevel.code"
-              >
+                [(ngModel)]="profiles.academicLevel.code">
                 <option *ngFor="let academicLevel of academicLevels" [ngValue]="academicLevel">
                   {{ academicLevel.code }}
                 </option>
@@ -147,7 +146,7 @@
           </div>
           <div class="col alert alert-danger" role="alert"
                *ngIf="formUser.get('desiredWorkingAddress')?.errors?.required && formUser.get('desiredWorkingAddress')?.touched">
-            Bạn phải nhập địa chỉa làm việc mong muốn !
+            Bạn phải nhập địa chỉ làm việc mong muốn !
           </div>
         </div>
         <div class="form-group col-md-6">
@@ -182,7 +181,7 @@
           </div>
           <div class="col alert alert-danger" role="alert"
                *ngIf="formUser.get('skill')?.errors?.required && formUser.get('skill')?.touched">
-            Bạn phải nhập trình độ học vấn!
+            Bạn phải nhập kỹ năng!
           </div>
         </div>
         <div class="form-group col-md-6">
@@ -191,7 +190,7 @@
             <div class="col-9">
               <select
                 class="custom-select mb-3"
-                formControlName="gender"
+                formControlName="desiredWorkingForm"
                 [(ngModel)]="profiles.desiredWorkingForm"
               >
                 <option value="Fulltime">Fulltime</option>

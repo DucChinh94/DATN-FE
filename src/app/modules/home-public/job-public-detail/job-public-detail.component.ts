@@ -280,9 +280,9 @@ export class JobPublicDetailComponent implements OnInit {
     this.profile.description = this.info.value.description;
     this.uploadCv();
     this.updateProfiles();
-    this.sendApply();
-    this.disconnect();
-    this.router.navigate(['/home-public']).then(r => console.log(r));
+    // this.sendApply();
+    // this.disconnect();
+    this.router.navigate(['/home-public/job']).then(r => console.log(r));
   }
 
   onSelected(event) {
@@ -330,11 +330,11 @@ export class JobPublicDetailComponent implements OnInit {
 
   onCancel() {
     // eslint-disable-next-line max-len
-    this.jobRegister.statusJobRegister = {code: 'Ứng viên đã hủy ứng tuyển', delete: false, description: 'Ứng vine đã hủy ứng tuyển', id: 6};
+    this.jobRegister.statusJobRegister = {code: 'Ứng viên đã hủy ứng tuyển', delete: false, description: 'Ứng viên đã hủy ứng tuyển', id: 6};
     this.updateJobRegister();
-    this.sendRefuse();
+    // this.sendRefuse();
     this.onRefuse();
-    this.router.navigate(['home-public']).then(r => console.log(r));
+    this.router.navigate(['home-public/job']).then(r => console.log(r));
   }
 
   connect() {
@@ -396,7 +396,7 @@ export class JobPublicDetailComponent implements OnInit {
     this.jobRegisterService.updateReason(this.reasonDto).subscribe(
       (data: any) => {
         this.jobRegister.statusJobRegister =data.statusJobRegister;
-        alert('Update thành công');
+        alert('Hủy ứng tuyển thành công');
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
