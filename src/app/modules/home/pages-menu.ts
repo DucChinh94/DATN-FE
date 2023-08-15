@@ -19,7 +19,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     group: true,
   },
   {
-    title: 'Quản lý người đăng tuyển',
+    title: 'Quản lý tài khoản',
     icon: 'person-outline',
     link: '/home/user/list',
   },
