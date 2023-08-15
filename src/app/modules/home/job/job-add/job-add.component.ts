@@ -99,9 +99,9 @@ export class JobAddComponent implements OnInit {
     // eslint-disable-next-line max-len
     this.jobService.addJob(this.jobDto).subscribe(
       (data: Job) => {
-        this.sendApply(data);
-        this.disconnect();
-        alert('Add thành công');
+        // this.sendApply(data);
+        // this.disconnect();
+        alert('Thêm mới tin tuyển dụng thành công');
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
